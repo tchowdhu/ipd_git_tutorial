@@ -4,7 +4,7 @@
 from getpass import getpass
 from netmiko import ConnectHandler
 
-#Device login info 
+# Device login info 
 CISCO_CSR_XE_HOST = 'sandbox-iosxe-latest-1.cisco.com'
 USERNAME='developer'
 PASSWORD=getpass('\nEnder password for {}@{}: '.format(USERNAME, CISCO_CSR_XE_HOST))
@@ -22,4 +22,5 @@ output = device.send_command("show ip interface brief")
 print()
 print (output)
 print()
+# Disconnecting the device
 device.disconnect()
